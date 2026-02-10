@@ -147,7 +147,7 @@ hr{
     height: auto;
     text-align: justify;
 }
-.info-nosotros h1, h2{
+.info-nosotros h1, .info-nosotros h2{
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 400;
