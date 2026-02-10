@@ -3,7 +3,9 @@
     padding: 0;
    
 }
-
+html {
+    scroll-behavior:smooth;
+}
 #cont-header{
     width: 100%;
     display: flex;
@@ -359,6 +361,24 @@ hr{
     padding: 20px;
     margin-bottom: 2%;
     font-size: 17px;
+}
+
+#contacto-wpp{
+    width: 8%;
+    height: 60px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    transition: transform 0.5s ease;
+}
+#contacto-wpp img{
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    
+}
+#contacto-wpp:hover{
+    transform: scale(1.2);
 }
 
 #footer{
