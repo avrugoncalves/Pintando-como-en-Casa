@@ -1,35 +1,35 @@
-let index = 0;
+document.querySelectorAll(".carousel").forEach(carousel => {
 
-const track = document.querySelector(".carousel-track");
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
+  let index = 0;
 
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+  const track = carousel.querySelector(".carousel-track");
+  const slides = carousel.querySelectorAll(".slide");
+  const totalSlides = slides.length;
 
-function showSlide() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-}
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
 
-function nextSlide() {
-  index = (index + 1) % totalSlides;   
+  function showSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    showSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+  }
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  carousel.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+
   showSlide();
-}
-
-function prevSlide() {
-  index = (index - 1 + totalSlides) % totalSlides;   
-  showSlide();
-}
-
-
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
-
-
-document.addEventListener("keydown", e => {
-  if (e.key === "ArrowLeft")  prevSlide();
-  if (e.key === "ArrowRight") nextSlide();
 });
-
-
-showSlide();
