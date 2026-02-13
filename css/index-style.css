@@ -3,6 +3,12 @@
     padding: 0;
     
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html {
     scroll-behavior:smooth;
 }
@@ -184,7 +190,11 @@ hr{
     text-shadow: none;
     font-family: "Montserrat", sans-serif;
 }
+.info-carrusel a{
+    text-decoration: none;
+}
 .leermas-carrusel {
+  margin-top: 10px;
   padding: 1.3em 3em;
   font-size: 12px;
   text-transform: uppercase;
@@ -198,7 +208,13 @@ hr{
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
+
+
 
 .leermas-carrusel:hover {
   background-color: #4e93bf;
@@ -467,4 +483,356 @@ ion-icon.footer-red.md.hydrated:hover{
 
 
 
+@media (max-width: 576px) {
 
+    /* Header */
+    #cont-header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .header-section {
+        width: 100%;
+        justify-content: left;
+        margin: 8px 0;
+    }
+
+    .info {
+        margin: 8px auto;
+        width: 85%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #header-logo {
+        width: 80px;
+        height: 80px;
+        
+    }
+
+    #header-tittle {
+        font-size: 1.4rem;
+        margin: 20px 0;
+    }
+
+    ion-icon.header-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Menú hamburguesa necesario (actualmente no lo tienes, pero es clave) */
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu-items {
+        width: 100%;
+        margin: 6px 0;
+        font-size: 1.1rem;
+    }
+
+    .desplegable .menu-2 {
+        position: static;
+        width: 100%;
+    }
+
+    .menu-2 {
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        
+    }
+
+
+    /* Carrusel */
+    .carousel-track {
+        height: 400px; /* más bajo en móvil */
+    }
+
+    .info-carrusel {
+        top: 55%;
+        left: 4%;
+        width: 90%;
+    }
+
+    .info-carrusel h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-carrusel p {
+        font-size: 0.7rem;
+        text-align: justify;
+    }
+
+    .leermas-carrusel {
+        padding: 0.9em 2em;
+        font-size: 0.9rem;
+    }
+
+    /* Sección bienvenida */
+    #info-main {
+        height: auto;
+        margin: 40px 0;
+    }
+
+    #info-main h2 {
+        font-size: 1.6rem;
+    }
+
+    #info-main p {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+
+    /* Título servicios */
+    #trabajos-tittle {
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+    }
+
+    /* Grid de servicios (el más importante) */
+    .grid-servicios {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 90%;
+        margin: 60px auto;
+        gap: 30px;
+    }
+
+    .grid-elem-1 {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .grid-elem-1 img {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .grid-elem-1 h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-elem-2, .grid-elem-3, .grid-elem-4 {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .cards {
+        height: auto;
+        min-height: 380px;
+        width: 95%;
+    }
+
+    .card-img {
+        height: 220px;
+    }
+
+    .card-info p {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .grid-elem-4 h2{
+        margin-top: 5px;
+    }
+
+    .grid-elem-4 p {
+        font-size: 1rem;
+        padding: 15px 10px;
+    }
+
+    /* WhatsApp flotante */
+    #contacto-wpp {
+        width: 20%;
+        right: 10%;
+        bottom: 2%;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-cont {
+        width: 90%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .footer-cont img {
+        width: 40%;
+        height: auto;
+    }
+
+    #footer-nav {
+        width: 100%;
+    }
+
+    #list-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-items {
+        margin: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    #footer-subnav {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .footer-redes ion-icon {
+        width: 36px;
+        height: 36px;
+        margin: 0 12px;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    #cont-header {
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .info {
+        width: 43%;
+        margin: 10px;
+    }
+
+    .menu {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-items {
+        margin: 0 auto;
+        font-size: 1.05rem;
+    }
+    .menu-2{
+        position: relative;
+        top: auto;
+        left: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+    .carousel{
+        width: 100%;
+    }
+    .carousel-track {
+        height: 480px;
+    }
+    .info-carrusel h1{
+        font-size: 60px;
+    }
+    .info-carrusel p{
+        font-size: 18px;
+    }
+
+    #info-main{
+        width: auto;
+        padding: 0;
+    }
+    .grid-servicios {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        width: 90%;
+        margin: 80px auto;
+        gap: 25px;
+    }
+
+    .grid-elem-1 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        margin: 0;
+        width: 100%;
+    }
+
+    .grid-elem-1 img {
+        height: 350px;
+        width: 100%;
+    }
+
+    .grid-elem-2{
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+    .grid-elem-3{
+        grid-column: 2/3;
+        grid-row: auto;
+    }
+
+    .grid-elem-4 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .cards {
+        height: auto;
+        min-height: 250px;
+    }
+    .card-info p{
+        width: 90%;
+        margin: auto;
+        font-size: 18px;
+    }
+    #info-main {
+        padding: 50px 30px;
+    }
+    #contacto-wpp{
+        width: 100px;
+        height: 100px;
+        bottom: 2%;
+        right: 5%;
+
+    }
+    #footer {
+        padding: 50px 20px;
+    }
+    .footer-cont img{
+        width: 55%;
+        margin: auto;
+    }
+    .footer-items{
+        margin: 20px auto;
+    }
+    #list-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Opcional: Ajustes muy pequeños (≤ 380px) */
+@media (max-width: 380px) {
+    .info-carrusel h1 {
+        font-size: 1.5rem;
+    }
+    .info-carrusel p {
+        font-size: 0.9rem;
+    }
+    .leermas-carrusel {
+        padding: 0.8em 1.8em;
+        font-size: 0.85rem;
+    }
+}

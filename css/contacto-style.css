@@ -109,32 +109,41 @@ hr{
     opacity: 1;
 }
 
-#banner{
+#banner {
+    position: relative;
+    display: inline-block; 
+    width: 100%;
+    
+}
+
+#banner img {
+    display: block;
     width: 100%;
     height: 600px;
-    align-items: center;
 }
-#banner h1{
-    color: white;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+.banner-text {
     position: absolute;
-    bottom: 28%;
-    left: 3%;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    margin-left: 15px;
 }
-#banner p{
-    position: absolute;
-    bottom: 25%;
-    left: 3%;
+
+.banner-text p{
     color: white;
     font-size: 1.2rem;
     font-weight: 400;
     text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-#banner img{
-    width: 100%;
-    height: 600px; 
+.banner-text h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 #info-principal{
@@ -344,4 +353,264 @@ ion-icon.footer-red.md.hydrated{
 }
 ion-icon.footer-red.md.hydrated:hover{
     transform: translateY(-10px);
+}
+
+
+@media (max-width: 576px) {
+
+    /* Header */
+    #cont-header {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .header-section {
+        width: 100%;
+        justify-content: left;
+        margin: 8px 0;
+    }
+
+    .info {
+        margin: 8px auto;
+        width: 85%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #header-logo {
+        width: 80px;
+        height: 80px;
+        
+    }
+
+    #header-tittle {
+        font-size: 1.4rem;
+        margin: 20px 0;
+    }
+
+    ion-icon.header-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Menú hamburguesa necesario (actualmente no lo tienes, pero es clave) */
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu-items {
+        width: 100%;
+        margin: 6px 0;
+        font-size: 1.1rem;
+    }
+
+    .desplegable .menu-2 {
+        position: static;
+        width: 100%;
+    }
+
+    .menu-2 {
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        
+    }
+
+    #banner{
+        height: 300px;
+        width: 100%;
+    }
+    #banner img{
+        height: 300px;
+        width: 100%;
+    }
+    #banner h1{
+        bottom: -15%;
+        left: 2%;
+        font-size: 45px;
+    }
+    #banner p{
+        bottom: -20%;
+        left: 2%;
+        font-size: 15px;
+    }
+    #info-principal{
+        flex-direction: column;
+        height: auto;
+    }
+    .contacto-info-main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #cont-redes-contacto{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+    .cont-info-red{
+        width: 85%;
+        margin: 30px auto;
+    }
+    /* WhatsApp flotante */
+    #contacto-wpp {
+        width: 20%;
+        right: 3%;
+        bottom: 2%;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-cont {
+        width: 90%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .footer-cont img {
+        width: 40%;
+        height: auto;
+    }
+
+    #footer-nav {
+        width: 100%;
+    }
+
+    #list-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-items {
+        margin: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    #footer-subnav {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .footer-redes ion-icon {
+        width: 36px;
+        height: 36px;
+        margin: 0 12px;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    #cont-header {
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .info {
+        width: 43%;
+        margin: 10px;
+    }
+
+    .menu {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-items {
+        margin: 0 auto;
+        font-size: 1.05rem;
+    }
+    .menu-2{
+        position: relative;
+        top: auto;
+        left: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #banner{
+        height: 300px;
+        width: 100%;
+    }
+    #banner img{
+        height: 300px;
+        width: 100%;
+    }
+    #banner h1{
+        bottom: 60%;
+        left: 2%;
+        font-size: 50px;
+    }
+    #banner p{
+        bottom: 58%;
+        left: 2%;
+        font-size: 20px;
+    }
+    #info-principal{
+        flex-direction: column;
+        height: auto;
+    }
+    .contacto-info-main{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #cont-redes-contacto{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+    .cont-info-red{
+        width: 85%;
+        margin: 30px auto;
+    }
+    /* WhatsApp flotante */
+    #contacto-wpp {
+        width: 20%;
+        right: 3%;
+        bottom: 2%;
+    }
+    #footer {
+        padding: 50px 20px;
+    }
+    .footer-cont img{
+        width: 55%;
+        margin: auto;
+    }
+    .footer-items{
+        margin: 20px auto;
+    }
+    #list-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Opcional: Ajustes muy pequeños (≤ 380px) */
+@media (max-width: 380px) {
+    .info-carrusel h1 {
+        font-size: 1.5rem;
+    }
+    .info-carrusel p {
+        font-size: 0.9rem;
+    }
+    .leermas-carrusel {
+        padding: 0.8em 1.8em;
+        font-size: 0.85rem;
+    }
 }
