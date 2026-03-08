@@ -264,6 +264,7 @@ hr{
 #trabajos-tittle{
     text-align: center;
     margin-bottom: 100px;
+    font-size: 30px;
 }
 
 .grid-servicios{
@@ -295,7 +296,7 @@ hr{
     transform: scale(1.1);
     filter: brightness(45%);
 }
-.grid-elem-1 h1{
+.grid-elem-1 h2{
     font-size: 40px;
     color: whitesmoke;
     position: absolute;
@@ -307,7 +308,7 @@ hr{
     left: 50%;
     transform: translate(-45%, -45%);
 }
-.grid-elem-1:hover h1{
+.grid-elem-1:hover h2{
     visibility: visible;
     opacity: 1;
 }
@@ -348,6 +349,9 @@ hr{
     margin: 0 10%;
     text-align: center;
 }
+.card-info h3{
+    font-size: 25px;
+}
 
 
 .grid-elem-3{
@@ -370,8 +374,9 @@ hr{
     border-radius: 8px;
     box-shadow: 2px 2px 20px #0c354e;
 }
-.grid-elem-4 h2{
+.grid-elem-4 h3{
     margin-bottom: 1%;
+    font-size: 25px;
 }
 .grid-elem-4 p{
     padding: 20px;
@@ -521,7 +526,7 @@ ion-icon.footer-red.md.hydrated:hover{
         height: 36px;
     }
 
-    /* Menú hamburguesa necesario (actualmente no lo tienes, pero es clave) */
+    
     .menu {
         flex-direction: column;
         height: auto;
@@ -553,7 +558,7 @@ ion-icon.footer-red.md.hydrated:hover{
 
     /* Carrusel */
     .carousel-track {
-        height: 400px; /* más bajo en móvil */
+        height: 400px; 
     }
 
     .info-carrusel {
@@ -576,7 +581,7 @@ ion-icon.footer-red.md.hydrated:hover{
         font-size: 0.9rem;
     }
 
-    /* Sección bienvenida */
+    
     #info-main {
         height: auto;
         margin: 40px 0;
@@ -597,7 +602,7 @@ ion-icon.footer-red.md.hydrated:hover{
         margin-bottom: 50px;
     }
 
-    /* Grid de servicios (el más importante) */
+    
     .grid-servicios {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -617,10 +622,16 @@ ion-icon.footer-red.md.hydrated:hover{
         height: 250px;
         object-fit: cover;
         width: 100%;
+        filter: brightness(45%);
     }
-
-    .grid-elem-1 h1 {
+    .grid-elem-1:hover img{
+        transform: scale(1);
+    }
+    
+    .grid-elem-1 h2 {
         font-size: 2.2rem;
+        visibility: visible;
+        opacity: 1;
     }
 
     .grid-elem-2, .grid-elem-3, .grid-elem-4 {

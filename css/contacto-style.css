@@ -139,7 +139,7 @@ hr{
     font-weight: 400;
     text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-.banner-text h1{
+.banner-text h2{
     color: white;
     font-size: 4rem;
     font-weight: bold;
@@ -172,16 +172,13 @@ hr{
 .contacto-info-main h2{
     font-weight: 700;
     text-shadow: 0 4px 10px rgba(33, 100, 255, 0.4);
-}
-.contacto-info-main h3{
-    font-weight: 400;
-}
-.contacto-info-main h2{
     font-size: 30px;
 }
 .contacto-info-main h3{
+    font-weight: 400;
     font-size: 25px;
 }
+
 .contacto-info-main iframe{
     border-radius: 10px;
 }

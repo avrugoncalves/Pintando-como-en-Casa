@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
+Disallow: /admin/
+Disallow: /privado/
 Sitemap: https://avrugoncalves.github.io/Pintando-como-en-Casa/sitemap.xml
